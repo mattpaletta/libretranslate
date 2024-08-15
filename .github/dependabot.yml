@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "docker"
+    directory: "/"
+    reviewers:
+      - "mattpaletta"
+    schedule:
+      interval: "monthly"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    reviewers:
+      - "mattpaletta"
+    schedule:
+      interval: "monthly"
