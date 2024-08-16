@@ -70,7 +70,7 @@ jobs:
         id: auth
         uses: 'google-github-actions/auth@v2.1.4'
         with:
-          project_id: ${{ PROJECT_ID }}
+          project_id: '${{ env.PROJECT_ID }}'
           workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
 
       # NOTE: Alternative option - authentication via credentials json
