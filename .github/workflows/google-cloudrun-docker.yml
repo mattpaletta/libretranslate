@@ -23,6 +23,7 @@ jobs:
       - name: Google Auth
         id: auth
         uses: 'google-github-actions/auth@v2.1.4'
+        if: github.ref == 'refs/heads/master'
         with:
           token_format: 'access_token'
           credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
@@ -30,6 +31,7 @@ jobs:
       - name: Docker Auth
         id: docker-auth
         uses: 'docker/login-action@v3'
+        if: github.ref == 'refs/heads/master'
         with:
           username: 'oauth2accesstoken'
           password: '${{ steps.auth.outputs.access_token }}'
