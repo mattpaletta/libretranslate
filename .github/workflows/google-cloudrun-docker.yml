@@ -44,7 +44,7 @@ jobs:
             
       - name: Deploy to Cloud Run
         id: deploy
-        uses: google-github-actions/deploy-cloudrun@v2.7.3
+        uses: google-github-actions/deploy-cloudrun@v2.7.4
         if: github.ref == 'refs/heads/master'
         with:
           service: ${{ env.SERVICE }}
