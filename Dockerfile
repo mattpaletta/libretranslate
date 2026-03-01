@@ -1,2 +1,2 @@
-FROM libretranslate/libretranslate:v1.6.4
+FROM libretranslate/libretranslate:v1.9.4
 RUN ./venv/bin/python scripts/install_models.py
